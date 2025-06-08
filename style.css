@@ -27,6 +27,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .loader-inner {
@@ -44,6 +45,7 @@ body {
 
 /* Header */
 .site-header {
+  font-family:Ubuntu;
   position: fixed;
   top: 0;
   width: 100%;
@@ -200,20 +202,6 @@ section.slideshow-section {
  padding-top:140px;
 }
 
-.slideshow-caption{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-}
-/* === Wrapper-ul slideshow-ului === */
-.portfolio-slideshow {
-  position: relative;
-  width: 100%;
-  height: 100%; /* Ocupă tot containerul */
-}
 
 /* === Slide-urile === */
 .slide {
@@ -264,16 +252,23 @@ section.slideshow-section {
 
 /* === Caption === */
 .slideshow-caption {
+  display: inline-block;
   bottom: 0;
   width: 100%;
   margin-top:20px;
   text-align: center;
   z-index: 3;
+  
+}
+.job-title{
+  display: inline-block;
+  border-bottom: 2px solid rgb(219, 219, 219); sau culoarea ta
+  padding-bottom: 4px; /* opțional, spațiu între text și linie */
 }
 
 .name {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 18px;  
+  font-size: 25px;  
 }
 
 .job-title {
@@ -306,10 +301,6 @@ section.slideshow-section {
   }
 }
 
-  .name {
- 
-    font-size: 30px;  
-  }
   .slideshow-container {
    margin-top:px;
   }
@@ -512,13 +503,6 @@ footer p {
   padding: 120px 20px 60px;
 }
 
-.portfolio-slideshow {
-  position: relative;
-  width: 100%;
-  height: 70vh;
-  overflow: hidden;
-  margin-bottom: 40px;
-}
 
 .portfolio-content {
   margin-right: 20px;
@@ -551,14 +535,16 @@ footer p {
 }
 
 .portfolio-content p {
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 15px;
-  font-size: 1.2rem;
+  font-size: 14.4px;
+  font-family:Ubuntu;
+
 }
 .portfolio-content h2 {
   line-height: 1.6;
   margin-bottom: 15px;
-  font-size: 1.2rem;
+  font-size: 17.6px;
   text-align:left;
 }
 
@@ -647,12 +633,9 @@ footer p {
   .about-content {
     padding: 10px;
   }
-}
 
-@media (max-width: 480px) {
-  .portfolio-slideshow {
-    height: 40vh;
-  }
+
+
   
   .portfolio-content h1,
   .about-content h1,
@@ -813,7 +796,11 @@ footer p {
   margin-bottom: 100px;
   border: 3px solid var(--primary-color);
 }
-
+@media (min-width: 900px){
+  .large-profile-image{
+    margin-top:150px;
+  }
+}
 .large-profile-image img {
   width: 100%;
   height: 100%;
@@ -854,7 +841,7 @@ footer p {
   font-weight: bold;
   font-style: italic;
   color: var(--primary-color);
-  border-bottom: 1px solid #eee;
+  border-bottom: 3px solid #ebebeb;
   padding-bottom: 10px;
   text-align: justify;
 }
@@ -863,13 +850,21 @@ footer p {
   margin-bottom: 0px;
 }
 
+
 .an {
-  font-size: 0.9rem;
-  color: var(--accent-color);
+  font-size: 1.2rem;
+  color: #aaa;
   margin-bottom: 20px;
   margin-top: 20px;
 }
 
+@media (max-width: 900px) {
+  .an {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
 .experience-item strong {
   font-weight: 600;
 }
@@ -883,7 +878,7 @@ footer p {
   margin-bottom: 8px;
   line-height: 1.5;
 }
-
+}
 @media (max-width: 768px) {
   .about-container {
     padding: 80px 15px 40px;
@@ -902,6 +897,7 @@ footer p {
     margin-left:20px;
     margin-right:20px;
   }
+  
   
   .education-section h2,
   .experience-section h2 {
